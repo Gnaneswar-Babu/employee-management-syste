@@ -1,112 +1,131 @@
-# Employee Management System
+<div align="center">
 
-A professional backend application built using *Spring Boot* to manage employee data securely and efficiently.
+<table border="1" cellpadding="20" cellspacing="0" width="80%">
+  <tr>
+    <td align="left">
 
----
+<h1 align="center">Employee Management System</h1>
 
-## 🚀 Features
+<p align="center">
+A professional backend application built using <b>Spring Boot</b> to manage employee data securely and efficiently.
+</p>
 
-- Employee CRUD Operations (Create, Read, Update, Delete)
-- RESTful APIs
-- Layered Architecture (Controller, Service, Repository)
-- JWT-based Authentication & Authorization
-- Global Exception Handling
-- Input Validation
+<hr>
 
----
+<h2>🚀 Features</h2>
 
-## 🛠️ Tech Stack
+<ul>
+  <li>Employee CRUD Operations (Create, Read, Update, Delete)</li>
+  <li>RESTful APIs</li>
+  <li>Layered Architecture (Controller, Service, Repository)</li>
+  <li>JWT-based Authentication & Authorization</li>
+  <li>Global Exception Handling</li>
+  <li>Input Validation</li>
+</ul>
 
-- Java 8
-- Spring Boot
-- Spring Security (JWT)
-- Hibernate / JPA
-- Maven
-- MySQL
-- IntelliJ IDEA
+<hr>
 
----
+<h2>🛠️ Tech Stack</h2>
 
-## 📂 Project Structure
+<ul>
+  <li>Java 8</li>
+  <li>Spring Boot</li>
+  <li>Spring Security (JWT)</li>
+  <li>Hibernate / JPA</li>
+  <li>Maven</li>
+  <li>MySQL</li>
+  <li>IntelliJ IDEA</li>
+</ul>
 
-src  
-└── main  
-&nbsp;&nbsp;&nbsp;&nbsp;├── java  
-&nbsp;&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;└── com.gnaneswar.employeemanagementsystem  
-&nbsp;&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;&nbsp;├── controller  
-&nbsp;&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;&nbsp;├── service  
-&nbsp;&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;&nbsp;├── repository  
-&nbsp;&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;&nbsp;├── entity  
-&nbsp;&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;&nbsp;├── dto  
-&nbsp;&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;&nbsp;├── security  
-&nbsp;&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;&nbsp;└── exception  
-&nbsp;&nbsp;&nbsp;&nbsp;└── resources  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└── application.properties
+<hr>
 
----
+<h2>📂 Project Structure</h2>
 
-## ⚙️ How to Run the Project
+<pre>
+src
+└── main
+    ├── java
+    │   └── com.gnaneswar.employeemanagementsystem
+    │       ├── controller
+    │       ├── service
+    │       ├── repository
+    │       ├── entity
+    │       ├── dto
+    │       ├── security
+    │       └── exception
+    └── resources
+        └── application.properties
+</pre>
 
-1. Clone the repository
+<hr>
 
-   git clone https://github.com/Gnaneswar-Babu/employee-management-system.git
+<h2>⚙️ How to Run the Project</h2>
 
-2. Open the project in IntelliJ IDEA
+<ol>
+  <li>Clone the repository</li>
+</ol>
 
-3. Update database configuration in application.properties
+<pre>
+git clone https://github.com/Gnaneswar-Babu/employee-management-system.git
+</pre>
 
-4. Run the main class:  
-   EmployeeManagementSystemApplication.java
----
-## 🧠 Implementation Details
+<ol start="2">
+  <li>Open the project in IntelliJ IDEA</li>
+  <li>Update database configuration in <b>application.properties</b></li>
+  <li>Run <b>EmployeeManagementSystemApplication.java</b></li>
+</ol>
 
-This project follows a clean and scalable backend architecture.
+<hr>
 
-### Implemented Modules
+<h2>🧠 Implementation Details</h2>
 
-- *Employee Module*
-    - Create Employee
-    - Get Employee by ID
-    - Get All Employees
-    - Update Employee Details
-    - Delete Employee
+<ul>
+  <li><b>Employee Module</b>
+    <ul>
+      <li>Create Employee</li>
+      <li>Get Employee by ID</li>
+      <li>Get All Employees</li>
+      <li>Update Employee</li>
+      <li>Delete Employee</li>
+    </ul>
+  </li>
 
-- *Security Module*
-    - JWT-based authentication
-    - Role-based authorization
-    - Secured APIs using Spring Security filters
+  <li><b>Security Module</b>
+    <ul>
+      <li>JWT-based authentication</li>
+      <li>Role-based authorization</li>
+      <li>Secured APIs using Spring Security filters</li>
+    </ul>
+  </li>
 
-- *Exception Handling*
-    - Centralized global exception handling
-    - Custom exception classes
-    - Meaningful HTTP status codes
+  <li><b>Exception Handling</b>
+    <ul>
+      <li>Centralized global exception handling</li>
+      <li>Custom exception classes</li>
+      <li>Meaningful HTTP status codes</li>
+    </ul>
+  </li>
+</ul>
 
-- *DTO & Validation*
-    - DTO pattern to avoid exposing entities
-    - Input validation using annotations
+<hr>
 
-- *Persistence Layer*
-    - JPA repositories
-    - Hibernate ORM mapping
-    - Database interaction using MySQL
----
+<h2>📌 Project Status</h2>
 
-## 🔐 Security
+<ul>
+  <li>✅ Backend implementation completed</li>
+  <li>🚧 Enhancements in progress (Swagger, Pagination, Docker)</li>
+</ul>
 
-- JWT-based authentication
-- Role-based authorization
-- Secured REST endpoints
+<hr>
 
----
+<h2>👨‍💻 Author</h2>
 
-## 📌 Project Status
-
-- ✅ Backend implementation completed
-- 🚧 Enhancements in progress (Swagger, Pagination, Docker)
-
----
-
-## 👨‍💻 Author
-
-*Gnaneswar Babu*  
+<p>
+<b>Gnaneswar Babu</b><br>
 Java Backend Developer
+</p>
+
+  </tr>
+</table>
+
+</div>
