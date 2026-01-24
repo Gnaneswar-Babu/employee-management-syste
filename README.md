@@ -1,112 +1,221 @@
-# Employee Management System
+<div align="center">
 
-A professional backend application built using *Spring Boot* to manage employee data securely and efficiently.
+<table border="1" cellpadding="20" cellspacing="0" width="80%">
+  <tr>
+    <td align="left">
 
----
+<h1 align="center">Employee Management System</h1>
 
-## 🚀 Features
+<p align="center">
+A professional backend application built using <b>Spring Boot</b> to manage employee data securely and efficiently.
+</p>
 
-- Employee CRUD Operations (Create, Read, Update, Delete)
-- RESTful APIs
-- Layered Architecture (Controller, Service, Repository)
-- JWT-based Authentication & Authorization
-- Global Exception Handling
-- Input Validation
+<hr>
 
----
+<h2>🚀 Features</h2>
 
-## 🛠️ Tech Stack
+<ul>
+  <li>Employee CRUD Operations (Create, Read, Update, Delete)</li>
+  <li>RESTful APIs</li>
+  <li>Layered Architecture (Controller, Service, Repository)</li>
+  <li>JWT-based Authentication & Authorization</li>
+  <li>Global Exception Handling</li>
+  <li>Input Validation</li>
+</ul>
 
-- Java 8
-- Spring Boot
-- Spring Security (JWT)
-- Hibernate / JPA
-- Maven
-- MySQL
-- IntelliJ IDEA
+<hr>
 
----
+<h2>🛠️ Tech Stack</h2>
 
-## 📂 Project Structure
+<ul>
+  <li>Java</li>
+  <li>Spring Boot</li>
+  <li>Spring Security (JWT)</li>
+  <li>Hibernate / JPA</li>
+  <li>Maven</li>
+  <li>MySQL</li>
+  <li>IntelliJ IDEA</li>
+</ul>
 
-src  
-└── main  
-&nbsp;&nbsp;&nbsp;&nbsp;├── java  
-&nbsp;&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;└── com.gnaneswar.employeemanagementsystem  
-&nbsp;&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;&nbsp;├── controller  
-&nbsp;&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;&nbsp;├── service  
-&nbsp;&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;&nbsp;├── repository  
-&nbsp;&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;&nbsp;├── entity  
-&nbsp;&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;&nbsp;├── dto  
-&nbsp;&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;&nbsp;├── security  
-&nbsp;&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;&nbsp;└── exception  
-&nbsp;&nbsp;&nbsp;&nbsp;└── resources  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└── application.properties
+<hr>
 
----
+<h2>📂 Project Structure</h2>
 
-## ⚙️ How to Run the Project
+<pre>
+src
+└── main
+    ├── java
+    │   └── com.gnaneswar.employeemanagementsystem
+    │       ├── controller
+    │       ├── service
+    │       ├── repository
+    │       ├── entity
+    │       ├── dto
+    │       ├── security
+    │       └── exception
+    └── resources
+        └── application.properties
+</pre>
 
-1. Clone the repository
+<hr>
 
-   git clone https://github.com/Gnaneswar-Babu/employee-management-system.git
+<h2>⚙️ How to Run the Project</h2>
 
-2. Open the project in IntelliJ IDEA
+<ol>
+  <li>Clone the repository</li>
+</ol>
 
-3. Update database configuration in application.properties
+<pre>
+git clone https://github.com/Gnaneswar-Babu/employee-management-system.git
+</pre>
 
-4. Run the main class:  
-   EmployeeManagementSystemApplication.java
----
-## 🧠 Implementation Details
+<ol start="2">
+  <li>Open the project in IntelliJ IDEA</li>
+  <li>Update database configuration in <b>application.properties</b></li>
+  <li>Run <b>EmployeeManagementSystemApplication.java</b></li>
+</ol>
 
-This project follows a clean and scalable backend architecture.
+<hr>
 
-### Implemented Modules
+<h2>📘 API Documentation (Swagger)</h2>
 
-- *Employee Module*
-    - Create Employee
-    - Get Employee by ID
-    - Get All Employees
-    - Update Employee Details
-    - Delete Employee
+<p>
+Swagger (OpenAPI) is integrated to visualize and test REST APIs interactively.
+It allows testing secured APIs using JWT without Postman.
+</p>
 
-- *Security Module*
-    - JWT-based authentication
-    - Role-based authorization
-    - Secured APIs using Spring Security filters
+<pre>
+http://localhost:8080/swagger-ui/index.html
+</pre>
 
-- *Exception Handling*
-    - Centralized global exception handling
-    - Custom exception classes
-    - Meaningful HTTP status codes
+<ul>
+  <li>JWT Authentication supported via <b>Authorize</b> button</li>
+  <li>All secured APIs can be tested directly from Swagger UI</li>
+</ul>
 
-- *DTO & Validation*
-    - DTO pattern to avoid exposing entities
-    - Input validation using annotations
+<hr>
 
-- *Persistence Layer*
-    - JPA repositories
-    - Hibernate ORM mapping
-    - Database interaction using MySQL
----
+<h2>🔐 JWT Authentication Flow</h2>
 
-## 🔐 Security
+<ol>
+  <li>Call Login API to generate JWT token</li>
+  <li>Copy the generated token</li>
+  <li>Click <b>Authorize</b> button in Swagger UI</li>
+  <li>Paste token in the format:</li>
+</ol>
 
-- JWT-based authentication
-- Role-based authorization
-- Secured REST endpoints
+<pre>
+Bearer &lt;JWT_TOKEN&gt;
+</pre>
 
----
+<p>
+If token is missing or invalid, APIs return <b>401 / 403 Unauthorized</b>.
+</p>
 
-## 📌 Project Status
+<hr>
 
-- ✅ Backend implementation completed
-- 🚧 Enhancements in progress (Swagger, Pagination, Docker)
+<h2>📡 REST API Endpoints</h2>
 
----
+<table border="1" cellpadding="8" cellspacing="0" width="100%">
+  <tr>
+    <th>HTTP Method</th>
+    <th>Endpoint</th>
+    <th>Description</th>
+    <th>Secured</th>
+  </tr>
+  <tr>
+    <td>POST</td>
+    <td>/auth/login</td>
+    <td>User login & JWT generation</td>
+    <td>No</td>
+  </tr>
+  <tr>
+    <td>GET</td>
+    <td>/api/employees</td>
+    <td>Get all employees</td>
+    <td>Yes</td>
+  </tr>
+  <tr>
+    <td>GET</td>
+    <td>/api/employees/{id}</td>
+    <td>Get employee by ID</td>
+    <td>Yes</td>
+  </tr>
+  <tr>
+    <td>POST</td>
+    <td>/api/employees</td>
+    <td>Create new employee</td>
+    <td>Yes</td>
+  </tr>
+  <tr>
+    <td>PUT</td>
+    <td>/api/employees/{id}</td>
+    <td>Update employee</td>
+    <td>Yes</td>
+  </tr>
+  <tr>
+    <td>DELETE</td>
+    <td>/api/employees/{id}</td>
+    <td>Delete employee</td>
+    <td>Yes</td>
+  </tr>
+</table>
 
-## 👨‍💻 Author
+<hr>
 
-*Gnaneswar Babu*  
+<h2>🧠 Implementation Details</h2>
+
+<ul>
+  <li><b>Employee Module</b>
+    <ul>
+      <li>Create Employee</li>
+      <li>Get Employee by ID</li>
+      <li>Get All Employees</li>
+      <li>Update Employee</li>
+      <li>Delete Employee</li>
+    </ul>
+  </li>
+
+  <li><b>Security Module</b>
+    <ul>
+      <li>JWT-based authentication</li>
+      <li>Stateless security</li>
+      <li>Secured APIs using Spring Security filters</li>
+    </ul>
+  </li>
+
+  <li><b>Exception Handling</b>
+    <ul>
+      <li>Centralized global exception handling</li>
+      <li>Custom exception classes</li>
+      <li>Meaningful HTTP status codes</li>
+    </ul>
+  </li>
+</ul>
+
+<hr>
+
+<h2>📌 Project Status</h2>
+
+<ul>
+  <li>✅ Backend implementation completed</li>
+  <li>✅ JWT Security implemented</li>
+  <li>✅ Swagger (OpenAPI) integrated</li>
+  <li>🚧 Pagination, Sorting & Docker planned</li>
+</ul>
+
+<hr>
+
+<h2>👨‍💻 Author</h2>
+
+<p>
+<b>Gnaneswar Babu</b><br>
 Java Backend Developer
+</p>
+<br>
+
+   
+  </tr>
+</table>
+
+</div>
